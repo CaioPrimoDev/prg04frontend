@@ -1,0 +1,22 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: darkred;
+    font-size: 1.4em;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
