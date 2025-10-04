@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(160deg, #181818, #202020);
+  color: #E5E5E5;
+  font-family: Arial, sans-serif;
+}
+
+.caixa {
+  width: 250px;
+  height: 150px;
+  border-radius: 12px; /* cantos arredondados */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; /* cor do texto */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* sombra suave */
+  margin: 10px; /* espaço entre caixas */
+}
+
+.amarelo {
+  background-color: #FFD700; /* você pode trocar depois */
+  color: #181818; /* texto escuro sobre amarelo */
+}
+
+.vermelho {
+  background-color: #FF1A25; /* vermelho tipo Netflix, mais claro */
+  color: #FFFFFF; /* texto branco para contraste */
+}
+
+.resumo {
+  background-color: rgba(255, 255, 255, 0.05); /* leve transparência sobre o fundo escuro */
+  color: #E5E5E5; /* texto claro para contraste */
+  padding: 20px 25px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 30px auto;
+  text-align: justify; /* texto mais elegante */
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* sutil profundidade */
+  backdrop-filter: blur(2px); /* efeito leve de vidro fosco */
+}
+
+
