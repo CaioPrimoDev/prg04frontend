@@ -1,0 +1,42 @@
+/* HEADER GERAL */
+header {
+  display: flex;                /* coloca o título e o menu na mesma linha */
+  justify-content: space-between; /* título à esquerda, menu à direita */
+  align-items: center;          /* centraliza verticalmente */
+  background-color: #001219;
+  padding: 15px 40px;
+}
+
+/* TÍTULO (LOGO) */
+header .logo {
+  color: white;
+  font-size: 24px;
+  margin: 0; /* remove espaço extra */
+}
+
+.menu {
+  display: flex; /* coloca os divs lado a lado */
+  gap: 15px;     /* espaçamento entre os quadrados */
+}
+
+/* CADA QUADRADO DO MENU */
+.menu-item {
+  background-color: #005f73;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* LINK DENTRO DO QUADRADO */
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block; /* ocupa todo o quadrado */
+  text-align: center;
+}
+
+/* HOVER DO QUADRADO */
+.menu-item:hover {
+  background-color: #0a9396;
+}
