@@ -1,0 +1,76 @@
+/* ===== KIT DE EFEITOS CSS MODULARES ===== */
+
+/* 1. Underline animado */
+.underline-animated {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.7s ease;
+  line-height: 1;
+}
+
+.underline-animated::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.underline-animated:hover {
+  color: #ffffff; /* padrão, pode sobrescrever */
+}
+
+.underline-animated:hover::after {
+  width: 100%;
+}
+
+/* Remove efeito underline animado */
+.no-underline-animated::after {
+  content: none !important;
+}
+
+.no-underline-animated:hover {
+  color: inherit !important;
+}
+
+/* 2. Hover de cor suave */
+.color-hover {
+  transition: color 0.5s ease;
+}
+
+.color-hover:hover {
+  color: #ffffff; /* cor padrão, pode sobrescrever */
+}
+
+/* 3. Sombra suave no hover */
+.shadow-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* 4. Zoom leve ao passar o mouse */
+.scale-hover {
+  display: inline-block; /* para evitar problemas de inline */
+  transition: transform 0.3s ease;
+}
+
+.scale-hover:hover {
+  transform: scale(1.05);
+}
+
+/* --- Extras --- */
+
+/* Desativar todos efeitos (útil para controle) */
+.no-effects {
+  all: unset;
+  all: initial;
+  all: revert;
+}

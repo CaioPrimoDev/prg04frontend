@@ -1,42 +1,76 @@
-/* HEADER GERAL */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #001219;
+  color: #f9f9f9;
+}
+
 header {
-  display: flex;                /* coloca o título e o menu na mesma linha */
-  justify-content: space-between; /* título à esquerda, menu à direita */
-  align-items: center;          /* centraliza verticalmente */
+  display: flex;
+  justify-content: space-between; /* Se aplica ao eixo horizontal (normalmente é o padrão) */
+  align-items: center; /* Se aplica ao eixo cruzado (vertical) */
   background-color: #001219;
   padding: 15px 40px;
 }
 
-/* TÍTULO (LOGO) */
+.right-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 header .logo {
   color: white;
   font-size: 24px;
-  margin: 0; /* remove espaço extra */
+  margin: 0;
 }
 
+/* MENU E ITENS */
 .menu {
-  display: flex; /* coloca os divs lado a lado */
-  gap: 15px;     /* espaçamento entre os quadrados */
+  display: flex;
+  gap: 15px;
 }
 
-/* CADA QUADRADO DO MENU */
 .menu-item {
-  background-color: #005f73;
   padding: 10px 20px;
   border-radius: 8px;
-  transition: 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-/* LINK DENTRO DO QUADRADO */
+/* LINK COM CLASSE GENÉRICA DE ANIMAÇÃO */
 .menu-item a {
-  color: white;
-  text-decoration: none;
   font-weight: bold;
-  display: block; /* ocupa todo o quadrado */
-  text-align: center;
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.7s ease;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
 }
 
-/* HOVER DO QUADRADO */
-.menu-item:hover {
-  background-color: #0a9396;
+/* OPÇÃO DESTACADA */
+.destaque {
+  background-color: #e50914;
+}
+
+/* RESPONSIVIDADE BÁSICA */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;  /* empilha logo e menu */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .right-group {
+    flex-direction: column; /* menu e login um abaixo do outro */
+    gap: 10px;
+  }
+
+  .menu {
+    flex-direction: column; /* menu vertical */
+    gap: 10px;
+  }
+
+  .menu-item {
+    padding: 8px 16px;
+  }
 }
