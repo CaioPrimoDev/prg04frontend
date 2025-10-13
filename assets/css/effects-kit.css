@@ -22,7 +22,8 @@
 }
 
 .underline-animated:hover {
-  color: #ffffff; /* padrão, pode sobrescrever */
+  color: #f5c518
+; /* padrão, pode sobrescrever */
 }
 
 .underline-animated:hover::after {

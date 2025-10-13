@@ -12,6 +12,30 @@ header {
   padding: 15px 40px;
 }
 
+.logo-text {
+  font-size: 1.3em;  /* ~21px */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo {
+  height: 100px;      /* altura confortável para acompanhar um <h3> */
+  width: auto;       /* mantém proporção */
+  vertical-align: middle;
+  margin: 0;          /* remove qualquer margem */
+  padding: 0;         /* remove qualquer padding */
+}
+
+img.logo, h3 {
+  vertical-align: middle;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* espaço pequeno entre logo e texto */
+}
+
 .right-group {
   display: flex;
   align-items: center;
