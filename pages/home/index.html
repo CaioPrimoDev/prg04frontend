@@ -13,6 +13,9 @@
      
      <!-- Conecta aoa kit de efeitos CSS-->
      <link rel="stylesheet" href="../../assets/css/effects-kit.css">
+
+     <link rel="stylesheet" href="../../assets/css/style-modal.css">
+
 </head>
 <body>
     
@@ -21,7 +24,7 @@
 
         <div class="logo-group">
             <img src="../../assets/images/logo-the-golden.png" alt="Logo" class="logo">
-            <h3 class="logo-text">Cine El Dorado</h2>
+            <h3 class="logo-text">Cine The Golden</h2>
         </div>
 
         <div class="right-group">
@@ -41,11 +44,46 @@
             </nav>
 
                 <!-- Botão de Login-->
-                <div class="menu-item destaque">
-                <a href="/pages/user/login.html" class="no-underline color-hover">Entrar</a>
+                <div class="acesso menu-item destaque">
+                <a href="#login" class="no-underline color-hover botao-login">Entrar</a>
+                <!-- Essa classe ficou uma bagunça, mas o importante é funcionar kkkk-->
                 </div>
             </div>
     </header>
+
+    <!-- Tela de Login/Cadastro -->
+    
+        <!-- MODAL DE LOGIN -->
+    <div id="login" class="modal">
+    <div class="modal-content">
+        <h2>Entrar</h2>
+        <form>
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+        </form>
+        <a href="#cadastro" class="link-secundario">Não tem conta? Cadastre-se</a>
+        <a href="#" class="close">Fechar</a>
+    </div>
+    </div>
+
+    <!-- MODAL DE CADASTRO -->
+    <div id="cadastro" class="modal">
+    <div class="modal-content">
+        <h2>Criar Conta</h2>
+        <form>
+        <input type="text" placeholder="Nome completo" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Senha" required>
+        <input type="password" placeholder="Confirmar senha" required>
+        <button type="submit">Cadastrar</button>
+        </form>
+        <a href="#login" class="link-secundario">Já tem conta? Faça login</a>
+        <a href="#" class="close">Fechar</a>
+    </div>
+    </div>
+    
+    <!-- Tela de Login/Cadastro -->
 
     <main>
         <!--Filme em Destaque-->

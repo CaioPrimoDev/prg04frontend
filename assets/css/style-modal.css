@@ -1,0 +1,98 @@
+/* ==============================
+   MODAIS DE LOGIN E CADASTRO
+   ============================== */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: none; /* escondido por padrão */
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* fica sobre tudo */
+}
+
+/* Exibe o modal ativo */
+#login:target,
+#cadastro:target {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #001219;
+  color: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Campos do formulário */
+.modal-content input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background: #f9f9f9;
+  color: #001219;
+  font-size: 0.95em;
+}
+
+/* Botões */
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e50914;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #ff1b25;
+}
+
+/* Links inferiores */
+.link-secundario {
+  display: block;
+  margin-top: 10px;
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.link-secundario:hover {
+  text-decoration: underline;
+}
+
+/* Botão "Fechar" */
+.close {
+  display: inline-block;
+  margin-top: 15px;
+  color: #e50914;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
