@@ -1,0 +1,3 @@
+admin@thegolden.com;12345
+joao@gmail.com;senha123
+maria@gmail.com;abc123
