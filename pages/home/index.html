@@ -8,6 +8,9 @@
     <!-- Adiciona o favicon-->
     <link rel="shortcut icon" href="../../assets/icons/thegolden.ico" type="image/x-icon">
 
+    <!-- Conecta com o Bootstrap-->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+
      <!-- Conecta à formatação do style.css-->
      <link rel="stylesheet" href="../../assets/css/style-principal.css">
      
@@ -21,35 +24,44 @@
     
     <!-- Cabeçalho -->
     <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark container-fluid py-3 fixed-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
 
-        <div class="logo-group">
-            <img src="../../assets/images/icon-final.png" alt="Logo" class="logo">
-            <h3 class="logo-text">Cine The Golden</h2>
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="../../assets/images/icon-final.png" alt="Logo" class="logo me-2">
+            <span class="logo-text mb-0">Cine The Golden</span>
+        </a>
+
+        <!-- Botão hamburguer -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu colapsável -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+                <a class="nav-link underline-animated" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link underline-animated" href="/pages/about/sobre.html">Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link underline-animated" href="/pages/contact/contato.html">Contato</a>
+            </li>
+            <li class="nav-item ms-md-3">
+                <a class="btn btn-danger" href="#login">Entrar</a>
+            </li>
+            </ul>
         </div>
 
-        <div class="right-group">
-            <nav class="menu">
-                <!-- Botão Home -->
-                <div class="menu-item">
-                <a href="" class="underline-animated">Inicio</a></div>
-
-                <!-- Botão Sobre -->
-                <div class="menu-item">
-                <a href="/pages/about/sobre.html" class="underline-animated">Sobre</a></div>
-
-                <!-- Botão contato -->
-                <div class="menu-item">
-                <a href="/pages/contact/contato.html" class="underline-animated">Contato</a></div>
-
-            </nav>
-
-                <!-- Botão de Login-->
-                <div class="acesso menu-item destaque">
-                <a href="#login" class="no-underline color-hover botao-login">Entrar</a>
-                <!-- Essa classe ficou uma bagunça, mas o importante é funcionar kkkk-->
-                </div>
-            </div>
+        </div>
+    </nav>
     </header>
+
+
 
     <!-- Tela de Login/Cadastro -->
     
@@ -90,7 +102,7 @@
         <section>
 
         </section><br><br><br>
-        <br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </main>
 
     <footer>
@@ -99,5 +111,8 @@
 
     <!-- Script do login -->
     <script src="../../assets/js/login.js"></script>
+
+    <!-- Script do Bootstrap-->
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
