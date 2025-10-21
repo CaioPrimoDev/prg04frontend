@@ -1,83 +1,112 @@
+/* ======== CONFIGURAÇÃO GERAL ======== */
 body {
   font-family: Arial, sans-serif;
   background-color: #001219;
+  margin: 0;
+  padding: 0;
+  color: #fff;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 15px;
+}
+
+/* ======== TOPO ======== */
+.topo {
+  text-align: center;
+  background-color: #ffb703;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 3px solid #000;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+
+/* ======== ÁREA PRINCIPAL ======== */
+.principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ======== LATERAIS ======== */
+.lateral-esquerda, .lateral-direita {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #e57c54;
+  padding: 5px 10px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.fileira-letra {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  color: #000;
+  background-color: #e57c54;
+  border: 1px solid #000;
+  padding: 4px 8px;
+  margin: 3px 0;
+  border-radius: 3px;
+}
+
+/* ======== ÁREA CENTRAL (POLTRONAS) ======== */
 .sala {
   background-color: #cbb997;
-  padding: 20px;
+  padding: 10px;
   border: 5px solid #2e2e2e;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-
-  max-width: 1080px;    /* largura máxima menor */
-  margin: 0 auto;       /* centraliza horizontalmente na tela */
-
-  /* Garante que o código da poltrona não seja selecionada, 
-  e evitando que isso atrapalhe a seleção da poltrona */
-  -webkit-user-select: none; /* Chrome, Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge antigos */
-  user-select: none;         /* padrão */
+  gap: 6px;
+  max-width: 1080px;
+  user-select: none;
 }
 
 .linha {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 35px;          /* 🔹 altura padrão */
-  width: 100%;           /* ocupa toda a largura disponível */
-  max-width: 1100px;     /* 🔹 limite de largura para centralizar tudo */
-  gap: 10px;             /* espaçamento entre letras e poltronas */
+  align-items: center;
+  gap: 7px;
 }
 
-.linha.menor{
-    gap: 30px;
-}
-
-.linha.maior#A{
-    gap: 10px;
-}
-
-.fileira {
-  background-color: #b56f5b;
-  border: 1px solid #000;
-  padding: 5px 8px;
-  font-weight: bold;
-  min-width: 25px;       /* mantém o tamanho igual em todas */
-  text-align: center;
-}
-
-.poltronas {
+.super-linha {
   display: flex;
-  justify-content: center; /* 🔹 centraliza automaticamente cada fileira */
-  flex-wrap: nowrap;
 }
 
-/* Isso é necessário, pois há ordens de maior prioridade que sobrescrevem qualquer ordem*/
-.linha.maior .poltronas.espacadas {
-    gap: 19px;  /* agora tem especificidade maior e vence */
-}
-
-.linha.maior .poltronas {
-  gap: 7px; /* aumenta apenas para linhas menores */
-}
-.linha.menor .poltronas {
-  gap: 9.8px; /* aumenta apenas para linhas menores */
-}
+/* Espaçamentos por linha */
+#H {gap: 10px;;}
+#G {gap: 12px;}
+#F {gap: 12px;}
+#E {gap: 12px;}
+#D {gap: 12px;}
+#C {gap: 12px;}
+#B {gap: 12px;}
+#A {gap: 13px;}
+/* ####################### */
 
 .poltrona {
-  width: 35px;
-  height: 35px;
-  border-radius: 6px;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
   border: 2px solid #000;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
   font-weight: bold;
+  color: #000;
 }
 
 .poltrona.livre {
@@ -89,39 +118,38 @@ body {
 }
 
 .poltrona.bloqueada {
-    background-color: #800080;
+  background-color: #800080;
 }
 
 .poltrona.selecionada {
-    background-color: #FFFF00;
+  background-color: #ffff00;
 }
 
 .poltrona.vazia {
-  border: none;           /* remove a borda */
-  background-color: transparent; /* sem cor de fundo */
-  font-size: 0;           /* remove qualquer número ou letra */
-  pointer-events: none;   /* opcional: não permite clique */
+  background-color: transparent;
+  border: none;
+  font-size: 0;
+  pointer-events: none;
 }
 
+/* ======== GUIA ======== */
 .guia {
   display: flex;
-  flex-direction: column;  /* organiza os filhos em coluna vertical */
-  gap: 3px;;
-  margin-left: 200px;        /* distancia do lado esquerdo da tela */
-  margin-bottom: 20px;      /* distância da sala */
-  align-items: flex-start;   /* alinha à esquerda do container */
-    
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 10px;
   color: #f9f9f9;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .guia-poltrona {
-  display: flex;            /* cada item com poltrona + texto em linha */
-  align-items: center;      /* centraliza verticalmente a poltrona e o texto */
-  gap: 10px;                /* espaço entre a poltrona e o texto */
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .guia-poltrona h4 {
-  margin: 0;     /* remove margem padrão do h4 */
+  margin: 0;
+  font-size: 14px;
 }
-
-
