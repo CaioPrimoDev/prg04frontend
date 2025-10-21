@@ -30,7 +30,7 @@ header {
 }
 
 .logo {
-  height: 5rem; /* ~80px no mobile */
+  height: 2rem; /* ~80px no mobile */
   width: auto;
   margin: 0;
   padding: 0;
@@ -105,7 +105,7 @@ header {
   }
 
   .logo {
-    height: 6.25rem; /* ~100px */
+    height: 3.25rem; /* ~100px */
   }
 
   .logo-text {
