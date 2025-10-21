@@ -1,5 +1,5 @@
 /* ==============================
-   MODAIS DE LOGIN E CADASTRO
+   MODAIS DE LOGIN E CADASTRO (Mobile First)
    ============================== */
 
 .modal {
@@ -13,7 +13,7 @@
   display: none; /* escondido por padrão */
   justify-content: center;
   align-items: center;
-  z-index: 999; /* fica sobre tudo */
+  z-index: 999;
 }
 
 /* Exibe o modal ativo */
@@ -22,36 +22,38 @@
   display: flex;
 }
 
+/* ====== CONTEÚDO DO MODAL (Base Mobile) ====== */
 .modal-content {
   background-color: #001219;
   color: #f9f9f9;
-  padding: 30px;
-  border-radius: 12px;
-  width: 350px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem; /* ~24px */
+  border-radius: 0.75rem; /* ~12px */
+  width: 85%; /* ocupa quase toda a tela em mobile */
+  max-width: 22rem; /* limite para evitar exagero (~352px) */
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   text-align: center;
   animation: fadeIn 0.4s ease;
 }
 
-/* Campos do formulário */
+/* ====== CAMPOS DO FORMULÁRIO ====== */
 .modal-content input {
   display: block;
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;
+  padding: 0.625rem; /* ~10px */
+  margin: 0.5rem 0; /* ~8px */
   border: none;
-  border-radius: 6px;
+  border-radius: 0.375rem; /* ~6px */
   background: #f9f9f9;
   color: #001219;
-  font-size: 0.95em;
+  font-size: 0.95rem;
 }
 
-/* Botões */
+/* ====== BOTÕES ====== */
 .modal-content button {
   width: 100%;
-  padding: 10px;
+  padding: 0.625rem; /* ~10px */
   border: none;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   background-color: #e50914;
   color: white;
   font-weight: bold;
@@ -63,36 +65,101 @@
   background-color: #ff1b25;
 }
 
-/* Links inferiores */
+/* ====== LINKS INFERIORES ====== */
 .link-secundario {
   display: block;
-  margin-top: 10px;
+  margin-top: 0.625rem; /* ~10px */
   color: #cccccc;
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 .link-secundario:hover {
   text-decoration: underline;
 }
 
-/* Botão "Fechar" */
+/* ====== BOTÃO "FECHAR" ====== */
 .close {
   display: inline-block;
-  margin-top: 15px;
+  margin-top: 1rem;
   color: #e50914;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Animação de entrada */
+/* ====== ANIMAÇÃO DE ENTRADA ====== */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-15px);
+    transform: translateY(-0.9375rem); /* ~15px */
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+input, button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+/* ==============================
+   MELHORIAS PARA TELAS MAIORES
+   ============================== */
+
+/* Tablets (>= 768px) */
+@media (min-width: 768px) {
+  .modal-content {
+    padding: 2rem; /* mais respiro em telas grandes */
+    width: 60%; /* mais compacto visualmente */
+    max-width: 25rem; /* ~400px */
+    border-radius: 1rem;
+  }
+
+  .modal-content input {
+    font-size: 1rem;
+  }
+
+  .modal-content button {
+    font-size: 1rem;
+  }
+
+  .link-secundario {
+    font-size: 1rem;
+  }
+
+  input, button {
+    width: 80%;
+    padding: 14px;
+    font-size: 1.05rem;
+  }
+}
+
+/* 💻 Ajustes para telas maiores (tablet e desktop) */
+@media (min-width: 600px) {
+  input, button {
+    width: 80%;
+    padding: 14px;
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 900px) {
+  input, button {
+    width: 60%;
+    padding: 16px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  input, button {
+    width: 60%;
+    padding: 16px;
+    font-size: 1.1rem;
   }
 }

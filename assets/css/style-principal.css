@@ -1,100 +1,114 @@
+/* ======== ESTILO BASE (Mobile First) ======== */
+html {
+  font-size: 16px; /* base de cálculo: 1rem = 16px */
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #001219;
   color: #f9f9f9;
+  margin: 0;
+  padding: 0;
 }
 
+/* CABEÇALHO */
 header {
   display: flex;
-  justify-content: space-between; /* Se aplica ao eixo horizontal (normalmente é o padrão) */
-  align-items: center; /* Se aplica ao eixo cruzado (vertical) */
+  flex-direction: column; /* empilha logo e menu no mobile */
+  align-items: center;
+  text-align: center;
   background-color: #001219;
-  padding: 15px 40px;
+  padding: 1.25rem 1rem; /* ~20px x 16px */
 }
 
-.logo-text {
-  font-size: 1.3em;  /* ~21px */
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.logo {
-  height: 100px;      /* altura confortável para acompanhar um <h3> */
-  width: auto;       /* mantém proporção */
-  vertical-align: middle;
-  margin: 0;          /* remove qualquer margem */
-  padding: 0;         /* remove qualquer padding */
-}
-
-img.logo, h3 {
-  vertical-align: middle;
-}
-
+/* LOGO E TEXTO */
 .logo-group {
   display: flex;
   align-items: center;
-  gap: 6px; /* espaço pequeno entre logo e texto */
+  justify-content: center;
+  gap: 0.4rem; /* ~6px */
 }
 
+.logo {
+  height: 5rem; /* ~80px no mobile */
+  width: auto;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.logo-text {
+  font-size: 1.3em; /* relativo ao elemento */
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+}
+
+/* GRUPO DIREITO (menu + login) */
 .right-group {
   display: flex;
+  flex-direction: column; /* empilhado no mobile */
   align-items: center;
-  gap: 20px;
+  gap: 0.6rem; /* ~10px */
+  margin-top: 1rem;
 }
 
-header .logo {
-  color: white;
-  font-size: 24px;
-  margin: 0;
-}
-
-/* MENU E ITENS */
+/* MENU */
 .menu {
   display: flex;
-  gap: 15px;
+  flex-direction: column; /* vertical no mobile */
+  gap: 0.6rem; /* ~10px */
 }
 
 .menu-item {
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 0.5rem 1rem; /* ~8x16px */
+  border-radius: 0.5rem; /* ~8px */
   transition: background-color 0.3s ease;
 }
 
-/* LINK COM CLASSE GENÉRICA DE ANIMAÇÃO */
 .menu-item a {
   font-weight: bold;
   color: #cccccc;
   text-decoration: none;
   transition: color 0.7s ease;
-  position: relative;
   display: inline-block;
   line-height: 1;
 }
 
-/* OPÇÃO DESTACADA */
 .destaque {
   background-color: #e50914;
 }
 
-/* RESPONSIVIDADE BÁSICA */
-@media (max-width: 768px) {
+/* ======== TELAS MAIORES (≥768px) ======== */
+@media (min-width: 768px) {
   header {
-    flex-direction: column;  /* empilha logo e menu */
-    text-align: center;
-    padding: 20px;
+    flex-direction: row; /* lado a lado */
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 1rem 5%; /* usa % para largura fluida */
   }
 
   .right-group {
-    flex-direction: column; /* menu e login um abaixo do outro */
-    gap: 10px;
+    flex-direction: row;
+    gap: 1.25rem; /* ~20px */
+    margin-top: 0;
   }
 
   .menu {
-    flex-direction: column; /* menu vertical */
-    gap: 10px;
+    flex-direction: row;
+    gap: 1rem; /* ~16px */
   }
 
   .menu-item {
-    padding: 8px 16px;
+    padding: 0.6rem 1.25rem; /* ~10x20px */
+  }
+
+  .logo {
+    height: 6.25rem; /* ~100px */
+  }
+
+  .logo-text {
+    font-size: 1.5em; /* ligeiramente maior em telas grandes */
   }
 }
