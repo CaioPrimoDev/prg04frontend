@@ -6,7 +6,7 @@
     <title>Home</title>
 
     <!-- Adiciona o favicon-->
-    <link rel="shortcut icon" href="../../assets/icons/thegolden.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/icons/icon-final-redi.png" type="image/png">
 
     <!-- Conecta com o Bootstrap-->
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
@@ -21,16 +21,20 @@
 
 </head>
 <body>
-    
+
     <!-- Cabeçalho -->
     <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark container-fluid py-3 fixed-top">
+    <nav 
+        class="navbar navbar-expand-md navbar-dark bg-dark container-fluid py-3 fixed-top" 
+        style="box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05)">
+        <!-- box-shadow serve para criar uma divisoria quase invisivel-->
+        
         <div class="container-fluid d-flex justify-content-between align-items-center">
 
         <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="../../assets/images/icon-final.png" alt="Logo" class="logo me-2">
-            <span class="logo-text mb-0">Cine The Golden</span>
+        <a class="navbar-brand d-flex align-items-center">
+            <img src="../../assets/images/icon-final.png" alt="Logo" class="logo me-2" href="#">
+            <span class="logo-text mb-0" style="cursor: default;">Cine The Golden</span>
         </a>
 
         <!-- Botão hamburguer -->
@@ -101,12 +105,73 @@
         <!--Filme em Destaque-->
         <section>
 
-        </section><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </section>
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner text-center">
+
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <div class="card" style="width: 18rem;">
+                <img src="../../assets/images/icon-final.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="card" style="width: 18rem;">
+                <img src="../../assets/images/icon-final.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="card" style="width: 18rem;">
+                <img src="../../assets/images/icon-final.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
     </main>
 
-    <footer>
-        <p>&copy; 2025 Cine The Golden - Todos os direitos reservados.</p>
+    <footer class="bg-dark text-white text-center py-3 mt-3">
+        <p class="mb-0">&copy; 2025 Cine The Golden - Todos os direitos reservados.</p>
+        <!-- mb-0 (margin botton = 0)-->
     </footer>
 
     <!-- Script do login -->
