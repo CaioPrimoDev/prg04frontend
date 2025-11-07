@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
+    <!-- data-bs-theme é um valor manipulável -->
     <head>
         <title>Prova</title>
         <!-- Required meta tags -->
@@ -14,10 +15,42 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="../assets/css/sandbox/test_login.css"/>
     </head>
 
-    <body class=" d-flex align-items-center py-4 bg-body-tertiary">
+    <body class=" d-flex justify-content-center align-items-center bg-body-tertiary">      
         
+        <main class=" w-100 m-auto form-container">
+                <form class=" p-3">
+                    <img src="../assets/icons/icon-final-redi.png" alt="icone"
+                        class=" mb-2"
+                        height="40px">
+
+                    <h1 class="h3 fw-normal mb-2">PLease Sign In</h1>
+
+                    <!-- Email -->
+                    <div class=" form-floating">
+                        <input type="email" class=" form-control" placeholder="" id="inputFloating">
+                        <label for="inputFloating">Email address</label>
+                    </div>
+
+                    <!-- Password -->
+                    <div class=" form-floating">
+                        <input type="password" class=" form-control" placeholder="" id="inputFloating">
+                        <label for="inputFloating">Password</label>
+                    </div>
+
+                    <!-- CheckBox -->
+                    <div class=" form-check text-start my-2">
+                        <input type="checkbox" class=" form-check-input" placeholder="" id="inputCheck">
+                        <label for="inputCheck">Remember me</label>
+                    </div>
+
+                    <!-- Button -->
+                     <a href="../sandbox/home.html" class="btn btn-primary w-100">Sign In</a>
+
+                </form>
+        </main>
         
 
         <!-- Bootstrap JavaScript Libraries -->

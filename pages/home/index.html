@@ -13,11 +13,11 @@
 
      <!-- Conecta à formatação do style.css-->
      <link rel="stylesheet" href="../../assets/css/style-principal.css">
-     
+
+
+
      <!-- Conecta aoa kit de efeitos CSS-->
      <link rel="stylesheet" href="../../assets/css/effects-kit.css">
-
-     <link rel="stylesheet" href="../../assets/css/style-modal.css">
 
 </head>
 <body>
@@ -25,7 +25,7 @@
     <!-- Cabeçalho -->
     <header>
     <nav 
-        class="navbar navbar-expand-md navbar-dark bg-dark container-fluid py-3 fixed-top" 
+        class="navbar navbar-expand-md navbar-dark bg-dark py-3 fixed-top" 
         style="box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05)">
         <!-- box-shadow serve para criar uma divisoria quase invisivel-->
         
@@ -56,8 +56,14 @@
                 <a class="nav-link underline-animated" href="/pages/contact/contato.html">Contato</a>
             </li>
             <li class="nav-item ms-md-3">
-                <a class="btn btn-danger" href="#login">Entrar</a>
+              <a class="btn btn-danger" 
+                href="#login" 
+                data-bs-toggle="modal" 
+                data-bs-target="#loginModal">
+                Entrar
+              </a>
             </li>
+
             </ul>
         </div>
 
@@ -69,35 +75,90 @@
 
     <!-- Tela de Login/Cadastro -->
     
-    <!-- MODAL DE LOGIN -->
-    <div id="login" class="modal">
-    <div class="modal-content">
-        <h2>Entrar</h2>
-        <form>
-        <input type="email" placeholder="E-mail" required>
-        <input type="password" placeholder="Senha" required>
-        <button type="submit">Entrar</button>
-        </form>
-        <a href="#cadastro" class="link-secundario">Não tem conta? Cadastre-se</a>
-        <a href="#" class="close">Fechar</a>
-    </div>
+    <!-- ================= MODAL LOGIN ================= -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm"> <!-- tamanho menor e mais vertical -->
+        <div class="modal-content custom-modal">
+          
+          <!-- Cabeçalho -->
+          <div class="modal-header border-0">
+            <h5 class="modal-title w-100 text-center" id="loginModalLabel">Entrar</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+
+          <!-- Corpo -->
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <input type="email" class="form-control form-control-custom" placeholder="E-mail" required>
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control form-control-custom" placeholder="Senha" required>
+              </div>
+              <button type="submit" class="btn btn-danger w-100">Entrar</button>
+            </form>
+          </div>
+
+          <!-- Rodapé -->
+          <div class="modal-footer border-0 justify-content-center">
+            <a href="#" 
+              class="link-alternar" 
+              data-bs-target="#cadastroModal" 
+              data-bs-toggle="modal" 
+              data-bs-dismiss="modal">
+              Não tem conta? Cadastre-se
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- MODAL DE CADASTRO -->
-    <div id="cadastro" class="modal">
-    <div class="modal-content">
-        <h2>Criar Conta</h2>
-        <form>
-        <input type="text" placeholder="Nome completo" required>
-        <input type="email" placeholder="E-mail" required>
-        <input type="password" placeholder="Senha" required>
-        <input type="password" placeholder="Confirmar senha" required>
-        <button type="submit">Cadastrar</button>
-        </form>
-        <a href="#login" class="link-secundario">Já tem conta? Faça login</a>
-        <a href="#" class="close">Fechar</a>
+    <!-- ================= MODAL CADASTRO ================= -->
+    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content custom-modal">
+          
+          <!-- Cabeçalho -->
+          <div class="modal-header border-0">
+            <h5 class="modal-title w-100 text-center" id="cadastroModalLabel">Criar Conta</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+
+          <!-- Corpo -->
+          <div class="modal-body">
+            <form id="cadastroForm">
+              <div class="mb-3">
+                <input type="text" class="form-control form-control-custom" placeholder="Nome completo" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control form-control-custom" placeholder="E-mail" required>
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control form-control-custom" placeholder="Senha" required>
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control form-control-custom" placeholder="Confirmar senha" required>
+              </div>
+              <button type="submit" class="btn btn-danger w-100">Cadastrar</button>
+            </form>
+          </div>
+
+          <!-- Rodapé -->
+          <div class="modal-footer border-0 justify-content-center">
+            <a href="#" 
+              class="link-alternar" 
+              data-bs-target="#loginModal" 
+              data-bs-toggle="modal" 
+              data-bs-dismiss="modal">
+              Já tem conta? Faça login
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
+
+
+
     
     <!-- Tela de Login/Cadastro -->
 
@@ -107,12 +168,11 @@
 
         </section>
 
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner text-center">
+        <div class="container text-center py-4 mx-auto me-3">
+          <div class="row justify-content-center g-2">
 
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-center">
-              <div class="card" style="width: 18rem;">
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100" style="width: 18rem;">
                 <img src="../../assets/images/icon-final.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -123,11 +183,9 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-              <div class="card" style="width: 18rem;">
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100" style="width: 18rem;">
                 <img src="../../assets/images/icon-final.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -135,14 +193,12 @@
                     Some quick example text to build on the card title.
                   </p>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
             </div>
           </div>
+        </div>
 
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-              <div class="card" style="width: 18rem;">
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100" style="width: 18rem;">
                 <img src="../../assets/images/icon-final.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -153,23 +209,14 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 
     </main>
 
-    <footer class="bg-dark text-white text-center py-3 mt-3">
+    <footer class="bg-dark text-white text-center py-3">
         <p class="mb-0">&copy; 2025 Cine The Golden - Todos os direitos reservados.</p>
         <!-- mb-0 (margin botton = 0)-->
     </footer>
@@ -179,5 +226,20 @@
 
     <!-- Script do Bootstrap-->
     <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const modals = ['loginModal', 'cadastroModal'];
+
+        modals.forEach(id => {
+          const modal = document.getElementById(id);
+          modal.addEventListener('hidden.bs.modal', () => {
+            const forms = modal.querySelectorAll('form');
+            forms.forEach(f => f.reset());
+          });
+        });
+      });
+    </script>
+
 </body>
 </html>
