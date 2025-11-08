@@ -284,7 +284,11 @@ header {
 
 
 
-
+/* Remove qualquer fundo padrão da navbar-collapse */
+.navbar-collapse.custom-collapse {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
 
 
 /* ======== TELAS MAIORES (≥768px) ======== */
@@ -341,4 +345,56 @@ header {
     height: 14px;
   }
 
+  .navbar-collapse.custom-collapse {
+    background-color: rgba(0, 0, 0, 0.95); /* fundo escuro translúcido */
+    padding: 1.5rem 0;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Centralizar links verticalmente */
+  .navbar-nav .nav-item {
+    margin: 0.6rem 0;
+  }
+
+  /* Estilo dos links */
+  .navbar-nav .nav-link {
+    color: #f1f1f1 !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #dc3545 !important;
+    transform: scale(1.05);
+  }
+
+  /* Botão “Entrar” no mobile */
+  .navbar-nav .btn-danger {
+    font-weight: 500;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .navbar-nav .btn-danger:hover {
+    background-color: #b51d33;
+    transform: scale(1.05);
+  }
+
+  /* Ícone do botão hamburguer */
+.navbar-toggler {
+  border: none;
+  outline: none;
 }
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1); /* deixa o ícone branco */
+  width: 1.8em;
+  height: 1.8em;
+}
+}
+
+
+
+

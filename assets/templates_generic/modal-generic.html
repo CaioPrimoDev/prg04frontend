@@ -1,0 +1,45 @@
+<!-- ================= MODAL GENÉRICO ================= -->
+<div class="modal fade" id="genericModal" tabindex="-1" aria-labelledby="genericModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm"> <!-- ajuste o tamanho: modal-sm, modal-md, modal-lg -->
+    <div class="modal-content custom-modal">
+
+      <!-- Cabeçalho -->
+      <div class="modal-header border-0">
+        <h5 class="modal-title w-100 text-center" id="genericModalLabel">Título do Modal</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+
+      <!-- Corpo -->
+      <div class="modal-body text-center">
+        <!-- Conteúdo livre -->
+        <p>Insira aqui qualquer texto, formulário, imagem ou botão.</p>
+        <!-- Exemplo opcional de formulário -->
+        <!--
+        <form id="formExemplo">
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-custom" placeholder="Digite algo..." required>
+          </div>
+          <button type="submit" class="btn btn-danger w-100">Confirmar</button>
+        </form>
+        -->
+      </div>
+
+      <!-- Rodapé -->
+      <div class="modal-footer border-0 justify-content-center">
+        <!-- Botões opcionais -->
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <!-- ou um link de ação -->
+        <!--
+        <a href="#" class="link-alternar" data-bs-target="#outroModal" data-bs-toggle="modal" data-bs-dismiss="modal">
+          Ir para outro modal
+        </a>
+        -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Botão para abrir -->
+<a href="#" data-bs-toggle="modal" data-bs-target="#genericModal">Abrir Modal</a>

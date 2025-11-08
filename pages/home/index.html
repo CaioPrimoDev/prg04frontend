@@ -14,8 +14,6 @@
      <!-- Conecta à formatação do style.css-->
      <link rel="stylesheet" href="../../assets/css/style-principal.css">
 
-
-
      <!-- Conecta aoa kit de efeitos CSS-->
      <link rel="stylesheet" href="../../assets/css/effects-kit.css">
 
@@ -24,52 +22,68 @@
 
     <!-- Cabeçalho -->
     <header>
-    <nav 
-        class="navbar navbar-expand-md navbar-dark bg-dark py-3 fixed-top" 
-        style="box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05)">
-        <!-- box-shadow serve para criar uma divisoria quase invisivel-->
-        
-        <div class="container-fluid d-flex justify-content-between align-items-center">
+      <nav 
+          class="navbar navbar-dark bg-dark py-2 fixed-top" 
+          style="box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05)">
+          <!-- box-shadow serve para criar uma divisoria quase invisivel-->
+          
+          <div class="container-fluid d-flex justify-content-between align-items-center">
 
-        <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center">
-            <img src="../../assets/images/icon-final.png" alt="Logo" class="logo me-2" href="#">
-            <span class="logo-text mb-0" style="cursor: default;">Cine The Golden</span>
-        </a>
+            <!-- Logo -->
+            <a href="/pages/home/index.html" class="navbar-brand d-flex align-items-center">
+              <img src="../../assets/images/icon-final.png" alt="Logo" class="logo me-2">
+              <span class="logo-text mb-0" style="cursor: default;">Cine The Golden</span>
+            </a>
 
-        <!-- Botão hamburguer -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <!-- Menu colapsável -->
-        <div class="collapse navbar-collapse" id="navbarMenu">
-            <ul class="navbar-nav ms-auto align-items-center">
-            <li class="nav-item">
-                <a class="nav-link underline-animated" href="#">Início</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link underline-animated" href="/pages/about/sobre.html">Sobre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link underline-animated" href="/pages/contact/contato.html">Contato</a>
-            </li>
-            <li class="nav-item ms-md-3">
-              <a class="btn btn-danger" 
-                href="#login" 
-                data-bs-toggle="modal" 
-                data-bs-target="#loginModal">
-                Entrar
-              </a>
-            </li>
+            <!-- Botão hamburguer -->
+            <button 
+              class="navbar-toggler" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navbarMenu"
+              aria-controls="navbarMenu" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-            </ul>
-        </div>
+            <!-- Menu colapsável -->
+            <div class="collapse navbar-collapse custom-collapse" id="navbarMenu">
+              <ul class="navbar-nav ms-auto align-items-center text-center">
+                <li class="nav-item">
+                  <a class="nav-link underline-animated" href="#">Início</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link underline-animated" href="/pages/about/sobre.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link underline-animated" href="/pages/contact/contato.html">Contato</a>
+                </li>
+                <li class="nav-item mt-3">
+                  <a class="btn btn-danger px-4" 
+                    href="#login" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#loginModal">
+                    Entrar
+                  </a>
+                </li>
+                <li class="nav-item mt-2 mb-1">
+                  <a class="btn btn-outline-danger px-4" 
+                    href="" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="">
+                    MEUS INGRESSOS
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-        </div>
-    </nav>
+
+          </div>
+      </nav>
     </header>
+
 
 
 
@@ -162,59 +176,51 @@
     
     <!-- Tela de Login/Cadastro -->
 
-    <main>
-        <!--Filme em Destaque-->
-        <section>
+    <main class="container py-4">
+      <div class="row justify-content-center g-4">
 
-        </section>
-
-        <div class="container text-center py-4 mx-auto me-3">
-          <div class="row justify-content-center g-2">
-
-            <div class="col-md-4 col-sm-6">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="../../assets/images/icon-final.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="../../assets/images/icon-final.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+          <div class="card h-100" style="width: 18rem;">
+            <img src="../../assets/images/icon-final.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
         </div>
 
-            <div class="col-md-4 col-sm-6">
-              <div class="card h-100" style="width: 18rem;">
-                <img src="../../assets/images/icon-final.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+        <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+          <div class="card h-100" style="width: 18rem;">
+            <img src="../../assets/images/icon-final.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
-
           </div>
         </div>
 
+        <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+          <div class="card h-100" style="width: 18rem;">
+            <img src="../../assets/images/icon-final.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
 
+      </div>
     </main>
+
 
     <footer class="bg-dark text-white text-center py-3">
         <p class="mb-0">&copy; 2025 Cine The Golden - Todos os direitos reservados.</p>
