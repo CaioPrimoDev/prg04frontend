@@ -104,12 +104,12 @@
           <div class="modal-body">
             <form id="loginForm">
               <div class="mb-3">
-                <input type="email" class="form-control form-control-custom" placeholder="E-mail" required>
+                <input type="email" id="EmailCampo" class="form-control form-control-custom" placeholder="E-mail" required>
               </div>
               <div class="mb-3">
                 <input type="password" class="form-control form-control-custom" placeholder="Senha" required>
               </div>
-              <button type="submit" class="btn btn-danger w-100">Entrar</button>
+              <button type="button" class="btn btn-danger w-100" onclick="validar()">Entrar</button>
             </form>
           </div>
 
@@ -245,6 +245,20 @@
           });
         });
       });
+    </script>
+
+    <script>
+      // PRECISA DE CORREÇÃO/MELHORIA
+      function validar() {
+        let EmailCampo = document.getElementById("EmailCampo").value;
+        if (EmailCampo == "") {
+          window.alert("Por favor, preencha o campo de e-mail.");
+          return false;
+        } else {
+          window.alert("Login bem-sucedido!");
+          return true;
+        }
+      }
     </script>
 
 </body>
